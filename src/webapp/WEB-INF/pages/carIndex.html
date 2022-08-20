@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>carIndex</title>
+</head>
+<body>
+
+<!--<div>-->
+<!--    <th:block th:each="c : ${Cars}">-->
+<!--        <h1 th:text="${c}"></h1>-->
+<!--    </th:block>-->
+<!--</div>-->
+
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Seria</th>
+        <th scope="col">Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="c : ${Cars}">
+        <td th:text="${c.model}"/>
+        <td th:text="${c.seria}"/>
+        <td th:text="${c.age}"/>
+    </tr>
+    </tbody>
+</table>
+
+<!--<a href="/">GoToHello</a>-->
+</body>
+</html>
